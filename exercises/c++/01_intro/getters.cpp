@@ -1,39 +1,45 @@
 #include <iostream>
+#include <sstream>
+#include <string>
 
-void get_int();
+int get_int();
 
-void get_double();
+double get_double();
 
 int main()
 {
-  get_int();
-  get_double();
+  int a;
+  double b;
+  a=get_int();
+  b=get_double();
+  std::cout << "You entered the integer: " << a << std::endl;
+  std::cout << "You entered the double: " << b << std::endl;
 }
 
-void get_int()
+int get_int()
 {
   int i=0;
-    std::cout << "Digita un numero intero \n";
-    std::cin >> i;
-    while (!std::cin)
+  std::cout << "Enter an integer number \n";
+  for(std::string line; std::getline(std::cin, line);)
     {
-      std::cin.clear();
-      std::cin.ignore();
-      std::cout << "Il numero digitato non è un intero, digitarne un altro \n";
-      std::cin >> i;
+        if((std::istringstream(line) >> i >> std::ws).eof())
+            break;
+	
+        std::cout << "Not an integer please try again: " << std::flush;
     }
+  return i;
 }     
 
-void get_double()
+double get_double()
 {
   double i=0;
-    std::cout << "Digita un numero reale \n";
-    std::cin >> i;
-    while (!std::cin)
+  std::cout << "Enter a real number \n";
+  for(std::string line; std::getline(std::cin, line);)
     {
-      std::cin.clear();
-      std::cin.ignore();
-      std::cout << "Il numero digitato non è un numero reale, digitarne un altro \n";
-      std::cin >> i;
+        if((std::istringstream(line) >> i >> std::ws).eof())
+            break;
+	
+        std::cout << "Not a real number please try again: " << std::flush;
     }
+  return i;
 }    
