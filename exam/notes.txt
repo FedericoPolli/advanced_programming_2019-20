@@ -1,0 +1,50 @@
+template <typename k, typename v, typename cmp> (default value std::less<k>)
+class bst {
+      cmp op;
+public
+bst(cmp x) : op{x] {} (standard constructor)
+using nodetype=Node<std::pair<const k, v>>
+using iterator=_iteratori<nodetype, typename nodetype::valuetype>
+using const_iterator=_iteratori<nodetype, const typename nodetype::valuetype>
+
+t.insert({1,3}) automatic std::pair
+t.emplace(5,4)
+
+
+subscripting operator
+
+return insert({x, vt{}})
+
+3 classes: bst, iterator, node
+
+template <typename T> 
+struct Node {
+       T value;
+pointers:
+smart pointers (unique) left right
+raw pointer parent
+using valuetype=T;
+
+
+iterator outside class bst
+template <typename node, typename T>
+class _iterator{
+node* current
+public:
+using value_type = T
+using reference = value_type
+using pointer = value_type*
+using iterator_category
+using difference_type=std::ptrdiff_*;  (?)
+reference operator*() const {
+
+
+
+#ifndef __bst
+#define __bst
+
+
+
+
+
+#endif
