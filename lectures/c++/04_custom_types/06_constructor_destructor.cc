@@ -15,10 +15,10 @@ struct Foo {
 };
 
 Foo::Foo(const int i, const double d, const std::string& s)
-    : _i{i},
-      _d{d},
-      _s{s}
-// _i, _d, _s must be initialized in the same order they have been declared
+  : _i{i},
+    _d{d},
+    _s{s}
+    // _i, _d, _s must be initialized in the same order they have been declared
 
 {
   std::cout << "custom ctor\n";

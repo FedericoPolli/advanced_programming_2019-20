@@ -16,7 +16,7 @@ class Point_c {
   double x;
   double y;
 
- public:
+public:
   void print() {
     std::cout << "Class. x = " << x << "; y = " << y << std::endl;
   }  // note no ; at the end
